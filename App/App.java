@@ -17,11 +17,13 @@ public class App {
 
         Pessoa pessoa = new Pessoa();
         pessoa.setNome("Izabel");
-        pessoa.setQtdLivrosLidos(livros);
         
-Biblioteca livro = new Biblioteca("Um certo livro", "Tanto faz", 50);
+        
+Biblioteca livro = new Biblioteca();
+livro.setNome("Um livro qualquer.");
+pessoa.setLivros(livro);
 
-        System.out.printf("Ola %s, os livros lidos foram, %s ", pessoa.getNome(), pessoa.getLivro());
+        System.out.printf("Ola %s, os livros lidos foram, %s ", pessoa.getNome(), pessoa.getLivros());
 
     }
 

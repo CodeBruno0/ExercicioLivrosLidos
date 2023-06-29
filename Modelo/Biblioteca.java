@@ -2,32 +2,14 @@ package Modelo;
 
 public class Biblioteca {
     
-    public String titulo;
-    public String autor;
-    public int numPagina;
-
-    //comentario aqui
+    private String nome;
+    private int numPagina;
     
-    @Override
-    public String toString() {
-        return "Biblioteca [titulo=" + titulo + ", autor=" + autor + ", numPagina=" + numPagina + "]";
+    public String getNome() {
+        return nome;
     }
-    public Biblioteca(String titulo, String autor, int numPagina) {
-        this.titulo = titulo;
-        this.autor = autor;
-        this.numPagina = numPagina;
-    }
-    public String getTitulo() {
-        return titulo;
-    }
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-    public String getAutor() {
-        return autor;
-    }
-    public void setAutor(String autor) {
-        this.autor = autor;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
     public int getNumPagina() {
         return numPagina;
@@ -35,7 +17,12 @@ public class Biblioteca {
     public void setNumPagina(int numPagina) {
         this.numPagina = numPagina;
     }
-    public void qtd() {
+    @Override
+    public String toString() {
+        return String.format(getNome());
     }
+
+    //comentario aqui
     
+       
 }
